@@ -3,7 +3,7 @@
 ## 1.4.0.0
 
 ### Added
-- **XeSS Frame Generation in Vulkan games:** XeFG XMX, XeMFG (up to 4x), HUD interpolation with its presets, and live switching between XeFG XMX, XeMFG and DLSS Frame Generation while the game runs. The HUD interpolation setup runs in the background on first use, so it starts a moment after frame generation.
+- **XeSS Frame Generation in Vulkan games:** XeMFG and XeMFG XMX (up to 6x), HUD interpolation with its presets, and live switching between XeMFG, XeMFG XMX and DLSS Frame Generation while the game runs. The HUD interpolation setup runs in the background on first use, so it starts a moment after frame generation.
 - **DLSS Neural Rendering in Vulkan games**, before and after Super Resolution, with the on/off toggle.
 - **UI Layer in Vulkan games:** the HUD-less image is handed to frame generation for HUD interpolation, and the "Show detected UI" and HUD-less debug views now work in Vulkan games.
 - **Vulkan support setting:** `[vk-bridge] VulkanBridge=1` (default 0), then restart the game. It works for Vulkan games that use DLSS Frame Generation through Streamline, on NVIDIA GPUs. If it cannot work, the game keeps running on its own path and `jmod.log` has one line saying why. The Status page of the overlay has a "Vulkan bridge" section. DirectX 11 and DirectX 12 games are not affected by the setting.

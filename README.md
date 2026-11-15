@@ -6,7 +6,7 @@ JMOD brings DLSS Multi Frame Generation and Intel's XeSS Multi Frame Generation 
 
 **Version 1.4.0.0**
 
-- XeSS Frame Generation (XeFG XMX and XeMFG up to 4x, HUD interpolation, live switching) now also works in Vulkan games.
+- XeSS Frame Generation (XeMFG and XeMFG XMX up to 6x, HUD interpolation, live switching) now also works in Vulkan games.
 - DLSS Neural Rendering in Vulkan games, before or after Super Resolution.
 - The UI Layer gives frame generation a HUD-less image in Vulkan games.
 - New `[vk-bridge] VulkanBridge=1` setting turns on the Vulkan support (restart to apply). It is off by default and has no effect in DirectX games.
@@ -24,10 +24,10 @@ You set everything up in an in-game overlay. You can change the multiplier while
 - Pacing options (VSync / Reflex) and hotkeys for the multiplier (up / down) are in the overlay.
 
 **XeFG (XeSS Frame Generation).**
-- Two models: XeFG XMX and XeMFG, which generates up to 3 frames (4x).
+- Two methods: XeMFG (2x model, one pass per generated frame) and XeMFG XMX (multi-frame model, one pass per pair), up to 6x.
 - Runs on the tensor cores of your RTX card, for a lower GPU cost.
 - HUD interpolation with three presets: Light (lowest cost), Performance and Quality (smoothest).
-- Live switching between XeFG XMX, XeMFG and DLSS-G while the game runs.
+- Live switching between XeMFG, XeMFG XMX and DLSS-G while the game runs.
 - Supported `libxess_fg.dll` versions: 1.3.4.95, 1.3.1.78 and 1.3.1.68. Version 1.3.4.95 is included in the download.
 
 **UI Layer.** Gives frame generation a HUD-less image, so the HUD stays sharp and does not smear in generated frames. It works with both DLSS-G and XeFG in DirectX 12 and Vulkan games. In games that do not provide a HUD-less image, the UI Layer can build one.
