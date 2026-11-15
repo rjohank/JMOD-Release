@@ -56,6 +56,10 @@ If the game already uses a `winmm.dll`, rename ours to `version.dll` or `dxgi.dl
 
 **Files you supply.** NVIDIA's files are not included. Depending on what you use, put them in `jmod\streamline`: the Streamline DLLs for frame generation in games that do not have it, `nvngx_dlss.dll` for DLSS in DirectX 11 games without it, and `nvngx_dlssnr.dll` for Neural Rendering. Details are in [docs/install.md](docs/install.md).
 
+## DirectX 11 games
+
+Frame generation and DLSS Neural Rendering also work in DirectX 11 games. Set `D3D11Bridge=1` in the `[dx11-bridge]` section of `jmod\jmod.ini` and restart the game. See [docs/install.md](docs/install.md#directx-11-games).
+
 ## Vulkan games
 
 XeFG and DLSS Neural Rendering also work in Vulkan games that use DLSS Frame Generation. Set `VulkanBridge=1` in the `[vk-bridge]` section of `jmod\jmod.ini` and restart the game. See [docs/install.md](docs/install.md#vulkan-games).

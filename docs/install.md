@@ -30,6 +30,21 @@ NVIDIA's files are not included. When a feature needs them, put them in `jmod\st
 
 Take them from an NVIDIA Streamline SDK release, or from a game that ships them.
 
+## DirectX 11 games
+
+Frame generation and DLSS Neural Rendering also work in DirectX 11 games. Turn on the DirectX 11 support in `jmod\jmod.ini`, then restart the game:
+
+```ini
+[dx11-bridge]
+D3D11Bridge=1
+```
+
+- For frame generation, also set `InjectFrameGen=1` in `[fg-inject]` and put NVIDIA's Streamline files in `jmod\streamline`. See [fg-inject](modules/fg-inject.md).
+- For a game that ships no DLSS, turn on `SrInject=1` in `[sr-inject]` and put `nvngx_dlss.dll` in `jmod\streamline`. See [sr-inject](modules/sr-inject.md).
+- For Neural Rendering, put `nvngx_dlssnr.dll` in `jmod\streamline` ([neural-rendering.md](neural-rendering.md)).
+
+Start the game once first, so that JMOD writes `jmod\jmod.ini`. See [dx11-bridge](modules/dx11-bridge.md).
+
 ## Vulkan games
 
 JMOD can run XeSS Frame Generation (with its HUD options) and DLSS Neural Rendering in a Vulkan game that uses DLSS Frame Generation through Streamline. NVIDIA GPUs only.
