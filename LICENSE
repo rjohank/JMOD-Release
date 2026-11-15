@@ -1,0 +1,29 @@
+JMOD Freeware License
+
+Copyright (c) 2026 rjohank. All rights reserved.
+
+JMOD (the "Software") is distributed as compiled binaries only. The source
+code is not published.
+
+You may:
+- download and use the Software free of charge, for personal,
+  non-commercial use.
+
+You may not, without prior written permission from the copyright holder:
+- redistribute or re-upload the Software, or any part of it, in any form;
+- modify the Software or create derivative works from it;
+- reverse engineer, decompile or disassemble the Software, except where
+  applicable law permits it despite this restriction;
+- sell, rent, lease or otherwise charge for the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+COPYRIGHT HOLDER BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR
+IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+Third-party components are covered by their own licenses; see
+THIRD-PARTY-NOTICES.md. NVIDIA and Intel files are not covered by this
+license.
