@@ -63,6 +63,7 @@ XeFG and DLSS Neural Rendering also work in Vulkan games that use DLSS Frame Gen
 ## Documentation
 
 - [Install guide](docs/install.md): what is in the zip, files you supply, Vulkan games, safe mode, uninstall
+- [Modules](docs/modules.md): one page per module, with every setting
 - [DLSS Neural Rendering](docs/neural-rendering.md)
 - [Changelog](CHANGELOG.md)
 - [Third-party notices](THIRD-PARTY-NOTICES.md)
