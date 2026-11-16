@@ -61,7 +61,7 @@ JMOD can run XeSS Frame Generation (with its HUD options) and DLSS Neural Render
 
 If you have not started the game once with JMOD, there is no `jmod.ini` yet. Start the game once and close it, then edit the file.
 
-The overlay's Status page has a "Vulkan bridge" section. It shows whether the support is ready ("Vulkan bridge: ready"), the graphics device it uses and how many shared textures are in use.
+The overlay's Diagnostic page (System > Diagnostic) has a "Vulkan bridge" section. It shows whether the support is ready ("Vulkan bridge: ready"), the graphics device it uses and how many shared textures are in use.
 
 If it cannot work (the setting is off, the graphics driver lacks something it needs, or a frame cannot be handled), the game keeps running on its own path: DLSS Frame Generation stays NVIDIA's, Neural Rendering stays off, and `jmod.log` has one line saying why. DirectX 11 and DirectX 12 games are not affected by this setting.
 

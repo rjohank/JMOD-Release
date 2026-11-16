@@ -1,5 +1,27 @@
 # Changelog
 
+## 1.5.2.0
+
+### Added
+- **`[core] SkipProcesses` setting:** list other programs (comma-separated, for example `SkipProcesses=Reporter.exe,Updater.exe`) that should not load JMOD. Known crash reporters and helper programs are recognized already. Read once at launch.
+
+### Changed
+- **One Diagnostic page:** the overlay's Status and Diagnostics pages are now one page, **System > Diagnostic**, with a collapsible section per category. The bridge sections start collapsed.
+- **Less work while a feature is off:** DLSS injection, Neural Rendering and the other optional features no longer do work every frame while they are turned off.
+
+### Fixed
+- **XeFG: the game could lose its graphics device and close** with UI Composition or HUD Interpolation on, when it changed the format of its HUD-less image (for example when leaving a dialogue or a menu).
+- **Crash reporters and other helper programs a game starts from its folder** no longer run a second copy of JMOD, which doubled log lines and could clear the game's `jmod.log`.
+
+### Known limits
+- A HUD-less image that differs too much from the game image is not used; HUD interpolation then works without it.
+- Vulkan support needs a game that uses DLSS Frame Generation, and NVIDIA GPUs. A change to `VulkanBridge` needs a restart.
+
+### Upgrade notes
+- No required settings changes.
+- The overlay's Status page is now part of **System > Diagnostic**.
+- Replace `winmm.dll` and the `jmod\modules` folder together.
+
 ## 1.4.0.0
 
 ### Added

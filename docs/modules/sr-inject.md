@@ -12,7 +12,7 @@ It is off by default. Turn it on per game, and only for a game **without** its o
 - Overlay, **Diagnostics** page, **Upscaler**, **Injection**: timings, statistics, and the state of each stage (depth, motion vectors, DLSS).
 - Overlay, **Status**: the state of the injection.
 
-**Debug views**, in the Diagnostics page (none is saved):
+**Debug views**, on the Diagnostic page (none is saved):
 
 | View | Shows |
 |---|---|

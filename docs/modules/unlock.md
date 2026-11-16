@@ -35,5 +35,5 @@ None. The multiplier hotkeys are on the [framegen](framegen.md) page, and they u
 
 ## Known limits
 
-- The multiplier a game or its Streamline files allow can still be lower than what you ask for. The Diagnostics page shows the multiplier the game requested and the one in force.
+- The multiplier a game or its Streamline files allow can still be lower than what you ask for. The Diagnostic page shows the multiplier the game requested and the one in force.
 - The compatibility options are for specific problems. Leave them off otherwise.
