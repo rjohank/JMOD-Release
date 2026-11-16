@@ -2,17 +2,9 @@
 
 JMOD brings DLSS Multi Frame Generation and Intel's XeSS Multi Frame Generation to GeForce RTX 40 series cards. It also adds DLSS Neural Rendering, and it can add DLSS to games that ship without it. It works in DirectX 11, DirectX 12 and Vulkan games.
 
-## Latest release
+## Download
 
-**Version 1.4.0.0**
-
-- XeSS Frame Generation (XeMFG and XeMFG XMX up to 6x, HUD interpolation, live switching) now also works in Vulkan games.
-- DLSS Neural Rendering in Vulkan games, before or after Super Resolution.
-- The UI Layer gives frame generation a HUD-less image in Vulkan games.
-- New `[vk-bridge] VulkanBridge=1` setting turns on the Vulkan support (restart to apply). It is off by default and has no effect in DirectX games.
-- Frame generation live switching also works in Vulkan games.
-
-Download: [GitHub Releases](https://github.com/rjohank/JMOD-Release/releases) or [Nexus Mods](https://www.nexusmods.com/site/mods/2575). Full history: [CHANGELOG.md](CHANGELOG.md).
+[GitHub Releases](https://github.com/rjohank/JMOD-Release/releases) or [Nexus Mods](https://www.nexusmods.com/site/mods/2575). What changed in each version is on the release page and in [CHANGELOG.md](CHANGELOG.md).
 
 ## What it does
 
@@ -81,6 +73,7 @@ Each release is one zip, `JMOD-MFG-RTX40-v<version>.zip`, on the [Releases](http
 Open an [issue](https://github.com/rjohank/JMOD-Release/issues) and include:
 
 - `jmod\jmod.log` from the game folder
+- a screenshot of the overlay's **System > Diagnostic** page, if the game starts
 - your GPU
 - your graphics driver version
 - the mod version
