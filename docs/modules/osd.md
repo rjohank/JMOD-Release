@@ -36,6 +36,7 @@ Each reading is a row of the display, and `1` = shown. In the overlay: **Reading
 | | `OsdGameFps` (`0`) | Game FPS, before frame generation |
 | | `OsdLows` (`0`) | 1% / 0.1% lows |
 | | `OsdBottleneck` (`0`) | Bottleneck |
+| | `OsdPcLatency` (`0`) | PC latency (experimental; DirectX games that report latency markers) |
 | | `OsdSession` (`0`) | Session timer |
 | Upscaler and frame generation | `OsdUpscale` (`0`) | Upscale ratio |
 | | `OsdUpscaler` (`0`) | Upscaler GPU time |
@@ -67,7 +68,7 @@ Each reading is a row of the display, and `1` = shown. In the overlay: **Reading
 
 | Key | Default | What it does |
 |---|---|---|
-| `OsdOrder` | all rows in the order of the table | The order of the rows, top to bottom: row names joined by commas (`fps,frametime,gamefps,lows,bottleneck,session,upscale,upscaler,framegen,gpuname,gpuload,gputemp,gpuhotspot,gpufan,gpuclock,memclock,gpupower,gpuvoltage,vram,gamevram,cpuname,cpu,cputemp,cpuhotspot,cpuclock,cpupower,cpuvoltage,ram,gameram,commit,resolution,clock,date`). Rows left out follow at the end. In the overlay, drag a row to move it. |
+| `OsdOrder` | all rows in the order of the table | The order of the rows, top to bottom: row names joined by commas (`fps,frametime,gamefps,lows,bottleneck,pclatency,session,upscale,upscaler,framegen,gpuname,gpuload,gputemp,gpuhotspot,gpufan,gpuclock,memclock,gpupower,gpuvoltage,vram,gamevram,cpuname,cpu,cputemp,cpuhotspot,cpuclock,cpupower,cpuvoltage,ram,gameram,commit,resolution,clock,date`). Rows left out follow at the end. In the overlay, drag a row to move it. |
 
 **Row presets**, in the overlay and on `OsdPresetHotkey`: **Minimal** (FPS), **Standard** (FPS, frame time, lows, GPU load, GPU temperature, VRAM, CPU load) and **Full** (every row).
 

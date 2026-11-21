@@ -14,6 +14,7 @@ Overlay, **Neural Rendering** page. Use **Save to ini** (bottom of the sidebar) 
 - **Model:** placement, number of passes, working scale and tuning.
 - **Composition:** how the model's result is blended into the frame.
 - **Debugging:** views and A/B comparison.
+- **Presets:** saved looks (see below).
 
 The state shows one of:
 
@@ -91,6 +92,14 @@ A colour-based filter on the final edit. Warm scenery may match and coloured lig
 | `CompareSwap` | `0` | `0`, `1` | Swaps the two sides. |
 | `ApplyModel` | `1` | `0`, `1` | `0` outputs the clean upscaler frame while the pass keeps running, for A/B comparison. |
 | `HoldFrame` | `0` | `0`, `1` | Freezes the model's input so a setting change re-renders the same frame. |
+
+## Presets
+
+A preset keeps the page's look: tuning, passes, overrides, composition, white point and the skin filter. It does not keep the on switch, the caller check or the debugging views. On the page, type a name and press **Save** (or **Overwrite**). Each preset is a file, `jmod\dlssnr\presets\<name>.ini`. Pick a saved preset from the list to load it, or delete it.
+
+## Custom models
+
+If you have your own model files, put each in its own folder under `jmod\dlssnr\models`. While that folder exists, the Model section shows a **Model** choice (for pass 1 and for each pass) and a status line. Without the folder there is no such choice. If a model does not match, the frame is left as the upscaler made it and the page says why.
 
 ## Hotkeys
 

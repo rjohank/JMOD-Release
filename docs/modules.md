@@ -18,6 +18,7 @@ JMOD is made of modules: one `.jmod` file each, in `jmod\modules`. Keep the whol
 |---|---|
 | [presets](modules/presets.md) | DLSS quality mode, upscale ratio, Super Resolution and Ray Reconstruction presets, DLSS Frame Generation preset. |
 | [dlssnr](modules/dlssnr.md) | DLSS Neural Rendering. A short guide is in [neural-rendering.md](neural-rendering.md). |
+| [sharpen](modules/sharpen.md) | Neural sharpening of the image right after DLSS. |
 
 ## Games without DLSS or frame generation
 

@@ -7,13 +7,14 @@ JMOD includes or links the libraries below. Each is used under its own license.
 | [Microsoft Detours](https://github.com/microsoft/Detours) | MIT | Copyright (c) Microsoft Corporation |
 | [Dear ImGui](https://github.com/ocornut/imgui) | MIT | Copyright (c) 2014-2026 Omar Cornut |
 | [nlohmann/json](https://github.com/nlohmann/json) | MIT | Copyright (c) 2013-2025 Niels Lohmann |
+| [Barbatos Neural Sharpening](https://github.com/BarbatosAWLS/Reshade-Shaders) | MIT | Copyright (c) Barbatos |
 | [NVIDIA Streamline](https://github.com/NVIDIA-RTX/Streamline) (headers) | MIT | Copyright (c) 2023 NVIDIA CORPORATION |
 | [Vulkan-Headers](https://github.com/KhronosGroup/Vulkan-Headers) | Apache-2.0 OR MIT | Copyright 2015-2026 The Khronos Group Inc. |
 | [gtl](https://github.com/greg7mdp/gtl) | Apache-2.0 | Copyright its authors; includes parts under their own notices from Google, Inc. (2014) and Quarkslab (2017) |
 | [frozen](https://github.com/serge-sans-paille/frozen) | Apache-2.0 | Copyright its authors |
 | [NVIDIA DLSS SDK](https://github.com/NVIDIA/DLSS) (headers) | NVIDIA RTX SDKs License | Copyright NVIDIA Corporation |
 
-## MIT License (Detours, Dear ImGui, nlohmann/json, Streamline)
+## MIT License (Detours, Dear ImGui, nlohmann/json, Barbatos Neural Sharpening, Streamline)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of
 this software and associated documentation files (the "Software"), to deal in

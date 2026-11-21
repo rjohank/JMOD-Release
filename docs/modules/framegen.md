@@ -14,7 +14,7 @@ A change from the overlay or from a hotkey applies live, within a frame: JMOD re
 
 ## Where to find it
 
-- Overlay, **Frame Generation** page. It has these sections: Multiplier, Frame generation method, Dynamic MFG, VSync and Reflex pacing, Plugin workarounds, Streamline runtime. The **Frame generation preset** section shows when the presets module is loaded.
+- Overlay, **Frame Generation** page. It has a card with the multiplier and the method choice, a panel with the chosen method's own options, and a "For every method" part with live summaries (Dynamic MFG, VSync and Reflex pacing, plugin workarounds, Streamline runtime). The **Frame generation preset** section shows when the presets module is loaded.
 - Overlay, **Home** page: one button per multiplier choice (Game's, Off, 2x to 6x). The current one is lit.
 - Overlay, **FG Health** page: live graphs of the output frame rate, presents per real frame and VRAM, with a "healthy" or "short" mark for the multiplier in force. Shaded areas are the warm-up after frame generation turns on, when a shortfall is expected. It records nothing while Dynamic MFG is on.
 - Overlay, **Diagnostics** page: Mode (fixed or Dynamic, the multiplier the game asked for and the multiplier in force), Dynamic MFG support, the Streamline version and DLSS-G version in use, and the preset in use.

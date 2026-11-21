@@ -24,6 +24,18 @@ The strip says when a reading is not available:
 | Frame generation GPU time: not measurable in this game | The game's graphics API does not allow the measurement. |
 | Frame generation GPU time: no DLSS frame generation through NGX | The game is not running DLSS Frame Generation. |
 
+### Performance page
+
+The **Performance** page shows the game's frame pipeline, read from the graphics driver's latency report (DirectX 11, DirectX 12 and Vulkan games that report it). It has these sections:
+
+- **Frame pipeline:** the time of each stage of the game's frame, with the median time from input to GPU done.
+- **CPU and GPU busy:** how long each is busy per frame, next to the game's frame time.
+- **Frame times:** the output frame time and the game's own.
+- **GPU time** of the upscaler and of frame generation, per evaluate.
+- **PC latency (experimental):** the time from your input to the picture on screen, split into input to simulation start and simulation start to screen. It needs a game that reports latency markers and answers latency pings, shows `--` until one arrives, and is not available in Vulkan games. The same reading can be shown in the [on-screen display](osd.md).
+
+The page shows the panel's own cost per frame. Nothing runs while the page is closed.
+
 ## Settings
 
 | Key | Section | Default | Values | What it does | Applies |
@@ -41,5 +53,5 @@ None.
 
 ## Known limits
 
-- There is no render latency reading.
+- PC latency is experimental and not available in Vulkan games.
 - GPU time of frame generation is shown per evaluate, not per displayed frame.

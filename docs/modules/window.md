@@ -39,3 +39,4 @@ None.
 
 - Only the window changes. A game that does not resize its render buffers to the new window size shows a stretched or cropped picture.
 - If the game has its own window mode setting, set it to windowed first.
+- While the mode is on, the layout holds: if the game restyles or moves its window, it is put back. Minimising works as usual.

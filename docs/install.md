@@ -12,7 +12,7 @@ Extract `JMOD-MFG-RTX40-v<version>.zip` into the folder that holds the game's `.
 
 There is no `jmod.ini` in the zip. JMOD writes it on first start, so updates keep your settings. The log is `jmod\jmod.log`.
 
-`winmm.dll` also works renamed to `version.dll` or `dxgi.dll`. Use one of those instead if the game already ships its own `winmm.dll`, or another mod uses that name. Use only one of the three.
+`winmm.dll` also works renamed to `version.dll`, `dxgi.dll`, `d3d12.dll`, `dbghelp.dll` or `dinput8.dll`. Use one of those instead if the game already ships its own `winmm.dll`, or another mod uses that name. Use only one of these names.
 
 ## Updating
 
@@ -65,6 +65,18 @@ The overlay's Diagnostic page (System > Diagnostic) has a "Vulkan bridge" sectio
 
 If it cannot work (the setting is off, the graphics driver lacks something it needs, or a frame cannot be handled), the game keeps running on its own path: DLSS Frame Generation stays NVIDIA's, Neural Rendering stays off, and `jmod.log` has one line saying why. DirectX 11 and DirectX 12 games are not affected by this setting.
 
+## Overlay look and notifications
+
+These settings are in the `[core]` section of `jmod\jmod.ini`. The overlay's Controls page changes them live.
+
+| Key | Default | Values | What it does |
+|---|---|---|---|
+| `OverlayStyle` | `1` | `0`, `1`, `2` | The panel's look: `0` = Classic, `1` = Modern, `2` = Compact (Modern with tighter rows). Only the drawing changes. |
+| `OverlayFollowWindows` | `0` | `0`, `1` | `1` = take light/dark mode and the accent colour from Windows each time the panel opens. |
+| `Notifications` | `1` | `0`, `1` | A short click-through notice when a hotkey changes a setting, and for the first-launch hint. Hidden while the panel is open. `0` = none. |
+| `NotificationPosition` | `0` | `0` to `5` | `0` = bottom left, `1` = top left, `2` = top right, `3` = bottom right, `4` = top center, `5` = bottom center. |
+| `NotificationDuration` | `3` | `1` to `15` | Seconds each notice stays. |
+
 ## Safe mode, and turning modules off
 
 - `jmod\modules.ini`: write `[Modules]`, then `disabled=window,dlssnr`, to keep the named modules from loading at all. The overlay's Modules page edits the same list.
@@ -73,4 +85,4 @@ If it cannot work (the setting is off, the graphics driver lacks something it ne
 
 ## Uninstall
 
-Close the game, then delete `winmm.dll` (or the `version.dll` / `dxgi.dll` you used) and the `jmod` folder. Nothing else is written, and no game file is modified.
+Close the game, then delete `winmm.dll` (or the `version.dll`, `dxgi.dll`, `d3d12.dll`, `dbghelp.dll` or `dinput8.dll` you used) and the `jmod` folder. Nothing else is written, and no game file is modified.

@@ -19,9 +19,9 @@ Overlay, **Frame Generation** page. Choose XeMFG or XeMFG XMX as the method, and
 
 | Option | What it does |
 |---|---|
-| UI Compose | Keeps the HUD crisp in generated frames. Needs HUD data from the game or from the UI Layer. |
-| Interpolate HUD | Moving HUD elements also move in the generated frames. Replaces UI Compose while on. |
-| HUD interpolation preset | **Light** (lowest GPU cost), **Quality** (smoothest, most GPU time), **Performance** (close to Quality for less GPU time). |
+| HUD | One choice: **Off**, **Composition** (keeps the HUD crisp in generated frames; needs HUD data from the game or from the UI Layer) or **Interpolate** (moving HUD elements also move in the generated frames). |
+| HUD interpolation preset (under Interpolate) | **Light** (lowest GPU cost), **Quality** (smoothest, most GPU time), **Performance** (close to Quality for less GPU time). |
+| Efficient (Quality and Performance presets) | Much less GPU time. Very fast HUD movement, or a HUD that covers much of the screen (maps, menus), can step instead of moving smoothly. |
 | Generate all frames of a pair together (Advanced) | Lowers the GPU cost, roughly by half at 4x. Turn it off only if you see problems. |
 | Use tensor cores (Advanced) | Speeds up XeSS Frame Generation on NVIDIA GPUs. |
 | HUD debug view, Save diagnostics, Log options (Advanced) | For bug reports. See below. |
@@ -44,6 +44,7 @@ All settings are in the `[xefg]` section of `jmod\jmod.ini`. Most are also in th
 | `XeFGTensorCores` | `1` | `0`, `1` | `1` = use the tensor cores of the GPU to speed up XeFG. `0` = off. | Next XeFG start |
 | `XeFGReuseGenerator` | `1` | `0`, `1` | `1` = when the game releases frame generation and creates it again right away (a menu, a window resize), XeFG is kept and reused instead of started again. This skips the ramp back to the full multiplier. A changed resolution, frame count or method still starts it again. `0` = always start again. | Live |
 | `XeFGLibraryPath` | empty | a path | Use this `libxess_fg.dll` instead of the one in `jmod\xefg`. Empty = the `jmod\xefg` folder. | Next library load |
+| `XeFGHudEfficient` | `0` | `0`, `1` | `1` = Efficient, with `XeFGHudPreset` `1` or `2`: much less GPU time. Very fast HUD movement, or a HUD that covers much of the screen, can step instead of moving smoothly. | Live |
 | `XeFGHudDiagHotkey` | `0` | a key code | A key that saves diagnostic data of the next 6 real frames to `jmod\hud-diag` (HUD interpolation must be on). `0` = none. Set it on the Controls page. | Live |
 | `XeFGHudTiming` | `0` | `0`, `1` | Logs how long HUD interpolation takes every 10 seconds, and shows the time per real and per generated frame on the page. | Live |
 | `XeFGProfile` | `0` | `0`, `1` | Measures where the GPU time goes, writes a summary to `jmod.log` every 10 seconds and shows the top steps on the page. Costs a little GPU time. Set it before launching the game, or toggle the game's frame generation. | Live |

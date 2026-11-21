@@ -1,5 +1,36 @@
 # Changelog
 
+## 1.6.0.0
+
+### Added
+- **Sharpening (new `sharpen` module):** a small neural network sharpens the image right after DLSS, on every frame DLSS upscales, before frame generation reads it. Only brightness is sharpened; colour stays. Two models (standard and edge-enhanced), strength 0 to 2, edge response, optional extra strength on moving pixels, and two debug maps. Off by default. Turn it on from the **Sharpening** page (`[sharpen] Sharpen=1`); every setting applies at once. Works in DirectX 12, in DirectX 11 with `D3D11Bridge=1` and in Vulkan with `VulkanBridge=1`.
+- **Overlay styles:** `OverlayStyle` Classic, Modern (new default) or Compact, with animated switches, sidebar icons and softer surfaces. **Follow Windows** takes light/dark mode and the accent colour from Windows.
+- **Notifications:** short click-through notices in a corner of the screen for hotkey changes (multiplier, VSync, Neural Rendering toggle, on-screen display preset, Interpolation A/B) and for the first-launch hint. `Notifications`, `NotificationPosition` and `NotificationDuration` in `[core]`, on the Controls page. They are hidden while the panel is open.
+- **Performance page:** the game's frame pipeline (CPU and GPU busy, frame times, GPU time per pass) from the driver's latency report, in DirectX 11, DirectX 12 and Vulkan. Nothing runs while the page is closed.
+- **PC latency (experimental)** on the Performance page and as a row in the on-screen display (`OsdPcLatency`). DirectX only.
+- **More system DLL names:** the core also runs as `d3d12.dll`, `dbghelp.dll` or `dinput8.dll`, for games where `winmm.dll`, `version.dll` and `dxgi.dll` are taken.
+- **XeFG HUD interpolation, Efficient option:** with the Quality or Performance preset, only the parts of the HUD that moved are processed. It lowers the cost of those presets.
+- **Neural Rendering:** saved presets on the page (a look is kept as `jmod\dlssnr\presets\<name>.ini`). Custom models: supply your own model files in `jmod\dlssnr\models`; the page shows a **Model** choice only when that folder exists.
+
+### Changed
+- **XeFG HUD choice:** the two HUD checkboxes are one choice, Off / Composition / Interpolate. The preset shows under Interpolate. The ini keys are unchanged.
+- **Frame Generation page** regrouped: a card for the multiplier and method, a panel for the chosen method's options, and a "For every method" section with live summaries.
+- **A module whose required module failed to start is skipped** with the reason in the log, and a module whose start failed no longer leaves its services behind.
+- Less per-frame work in several modules; unused state removed.
+
+### Fixed
+- **XeFG: game hang with HUD interpolation** in games that run frame generation on a compute queue (a hang when the HUD appeared on a scene change or a letter opened). The HUD step now runs on every frame pair.
+- **XeFG: shader pipelines created from a stream** were not recorded because of a wrong table index.
+- **Borderless window:** a game that keeps its own window size no longer fights the layout. While the mode is on, the layout holds even if the game restyles or moves its window.
+
+### Known limits
+- **Sharpening** works on frames DLSS upscales. It does nothing in a game with no DLSS unless Injection is on.
+- **PC latency** is experimental and needs a game that reports latency markers.
+
+### Upgrade notes
+- No required settings changes. Sharpening is off until you turn it on. The overlay opens in the new Modern style; set `OverlayStyle=0` for the old look.
+- Replace `winmm.dll` (or the name you use) and the whole `jmod\modules` folder together. `sharpen.jmod` is new.
+
 ## 1.5.2.0
 
 ### Added

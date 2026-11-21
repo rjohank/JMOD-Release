@@ -44,7 +44,7 @@ You set everything up in an in-game overlay. You can change the multiplier while
 
 **Uninstall:** delete `winmm.dll` and the `jmod` folder. Nothing else is changed.
 
-If the game already uses a `winmm.dll`, rename ours to `version.dll` or `dxgi.dll` (use only one).
+If the game already uses a `winmm.dll`, rename ours to `version.dll`, `dxgi.dll`, `d3d12.dll`, `dbghelp.dll` or `dinput8.dll` (use only one).
 
 **Files you supply.** NVIDIA's files are not included. Depending on what you use, put them in `jmod\streamline`: the Streamline DLLs for frame generation in games that do not have it, `nvngx_dlss.dll` for DLSS in DirectX 11 games without it, and `nvngx_dlssnr.dll` for Neural Rendering. Details are in [docs/install.md](docs/install.md).
 
@@ -86,6 +86,7 @@ Projects:
 - [dlssg-to-xefg-xmx](https://github.com/realdody/dlssg-to-xefg-xmx)
 - [DLSSG-Transfusion](https://github.com/TonyJoaca/DLSSG-Transfusion)
 - [MFGAdaUnlock-RenoDx](https://github.com/mavismmg/MFGAdaUnlock-RenoDx)
+- [Barbatos Neural Sharpening](https://github.com/BarbatosAWLS/Reshade-Shaders)
 
 SDKs and libraries:
 - [NVIDIA Streamline](https://github.com/NVIDIA-RTX/Streamline)
